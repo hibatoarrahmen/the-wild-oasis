@@ -118,7 +118,7 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({
     };
 
     fetchResponse();
-  }, [cabins, chatInput]);
+  }, [cabins, chatInput, bookings]);
 
   return <div>{isLoading ? <Spinner /> : response}</div>;
 };

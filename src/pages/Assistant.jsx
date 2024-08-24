@@ -1,16 +1,12 @@
 import ChatInput from "../features/ai/ChatInput";
-import { useState, useEffect } from "react";
-import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
+import { useState } from "react";
+
 import ChatMessages from "../features/ai/ChatMessages";
 import { useCabins } from "../features/cabins/useCabins";
-import { useBookings } from "../features/bookings/useBookings";
-import {
-  getBookings,
-  getBookingsWithoutFilterSortPage,
-} from "../services/apiBookings";
+
 import { useBookingsWithoutOptions } from "../features/bookings/useBookingsWithoutOptions";
 import Spinner from "../ui/Spinner";
-import Form from "../ui/Form";
+
 function formatBookingInfo(bookingArray) {
   return bookingArray
     .map((booking) => {
