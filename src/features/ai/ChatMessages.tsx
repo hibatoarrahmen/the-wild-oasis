@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { z } from "zod";
+
 import { OllamaEmbeddings } from "@langchain/ollama";
-import { DynamicStructuredTool, tool } from "@langchain/core/tools";
-import {
-  ChatGoogleGenerativeAI,
-  GoogleGenerativeAIEmbeddings,
-} from "@langchain/google-genai";
+
+import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 
 import { AgentExecutor, createReactAgent } from "langchain/agents";
 import type { PromptTemplate } from "@langchain/core/prompts";
